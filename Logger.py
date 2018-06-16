@@ -6,11 +6,14 @@ import csv
 import sys, os, time
 from datetime import datetime
 
+
 tday = datetime.today().day
 tmon = datetime.today().strftime("%B")
 
 try:
-	with open("Database\\" + tmon + ".csv", "wb") as CSVfile:
+	with open("Database/" + tmon + ".csv", "wb") as CSVfile:
+		CSVReader = csv.reader(CSVfile, delimiter = ',')
+
 		pass
 except:
-	print "something is not right="
+	print ("something is not right=")
